@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="#header">
         <nav class="head-nav">
             <div class="logo">
                 <img src="logo.jpg" alt="logo">
@@ -20,9 +20,15 @@
                 <ul class="navbar">
                     <li class="nav-items"><a href="#">Home</a></li>
                     <li class="nav-items"><a href="#">Menu</a></li>
-                    <li class="nav-items"><a href="#">Contact Us</a></li>
+                    <li class="nav-items"><a href="#">Our Branches</a></li>
                     <li class="nav-items"><a href="#">About Us</a></li>
                 </ul>
+            </div>
+            <div class="searchbox" id="searchbox">
+                <form action="">
+                    <input type="text" name="search" placeholder="Search items">
+                    <button type="submit" name="submit">Search</button>
+                </form>
             </div>
         </nav>
         <section class="disclaimer">
@@ -83,7 +89,7 @@
     <footer>
         <div>
             <p>&copy; vibooz 2022 | All rights reserved</p>
-            <p>Privacy | Terms | Contact Us</p>
+            <p><a href="#">Privacy</a> &middot; <a href="#">Terms</a> &middot; <a href="#">Contact Us</a></p>
         </div>
 
     </footer>
