@@ -2,6 +2,10 @@
     margin: 0;
 }
 
+body{
+    font-family: 'Cabin', sans-serif;
+}
+
 /* header */
 header::before{
     background: url(bgimg2.jpg) no-repeat center center/cover;
@@ -40,6 +44,7 @@ header::before{
     text-align: center;
     font-size: 1.5rem;
     margin-left: 1%;
+    font-family: 'Baloo Bhaina 2', cursive;
 }
 
 /* navigation bar */
@@ -57,7 +62,7 @@ header::before{
     padding: 10px 25px;
     font-size: 1.5rem;
     color: #b0d9d09e;
-    margin-left: 0.5rem;
+    margin-left: -0.5rem;
 }
 
 .navbar a:hover{
@@ -69,6 +74,7 @@ header::before{
 /* Search bar */
 .searchbox{
     margin: auto;
+    margin-right: 2%;
 }
 
 .searchbox input{
@@ -83,9 +89,13 @@ header::before{
     color: #b0d9d09e
 }
 
+/* Menu bars */
+.menu{
+    display: none;
+}
+
 /* disclaimer */
 .disclaimer{
-    /* position: absolute; */
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -93,10 +103,8 @@ header::before{
     color: #c5e6e4;
     z-index: 2;
     height: 500px;
-    /* margin: 10% 0; */
-    /* margin-top: 10% ; */
-    /* s */
     text-align: center;
+    font-family: 'Baloo Bhaina 2', cursive;
 }
 
 .disclaimer h1{
@@ -106,7 +114,7 @@ header::before{
 .disclaimer p{
     font-size: 2rem;
     margin: 2%;
-    padding: 0 20rem;
+    padding: 0 10rem;
 }
 
 
@@ -114,7 +122,6 @@ header::before{
 .container{
     display: flex;
     margin: 5% 0;
-    /* position: absolute; */
     width: 100%;
     justify-content: center;
     color: #4500b3;
@@ -142,8 +149,6 @@ header::before{
 }
 
 .box:hover{
-    /* transform: scale(1.5);
-    transform: translate(0, -123px); */
     cursor: pointer;
 }
 
@@ -154,7 +159,6 @@ header::before{
 /* varieties */
 .varieties{
     width: 100%;
-    /* position: absolute; */
     margin: 5% 0;
     text-align: center;
     width: 100%;
@@ -166,6 +170,7 @@ header::before{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     color: #4500b3;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .items{
@@ -193,7 +198,7 @@ header::before{
     cursor: pointer;
 }
 
-.items h3:hover{
+.items img:hover{
     transform: scale(1.5);
 }
 
@@ -201,8 +206,6 @@ header::before{
 footer div{
     color: white;
     background-color: black;
-    /* position: absolute; */
-    /* margin-top: 98%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -221,4 +224,71 @@ footer div a{
 
 footer div a:hover{
     color: gray;
+}
+
+@media only screen and (max-width:950px) {
+    .disclaimer h1{
+        font-size: 2.5rem;
+    }
+
+    .disclaimer p{
+        font-size: 1.5rem;
+    }
+
+    .container{
+        flex-wrap: wrap;
+    }
+
+    .menu{
+        margin: auto 2%;
+        display: block;
+    }
+
+    .fa-bars{
+        display: inline-block;
+        margin: auto;
+        font-size: 2rem;
+        cursor: pointer;
+        color: #b0d9d09e;
+    }
+
+    .navbar{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .disclaimer p{
+        padding: 0 5rem;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .item-varieties{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .disclaimer h1{
+        font-size: 2rem;
+    }
+
+    .disclaimer p{
+        font-size: 1rem;
+    }
+
+    .searchbox{
+        display: none;
+    }
+
+    .menu{
+        margin-left: 65%;
+    }
+
+    .disclaimer p{
+        padding: 0 2rem;
+    }
+
+    .items img{
+        width: 220px;
+    }
 }
