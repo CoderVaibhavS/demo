@@ -63,6 +63,7 @@ header::before{
     font-size: 1.5rem;
     color: #b0d9d09e;
     margin-left: -0.5rem;
+    transition: all 0.3s ease-in-out 0.3s;
 }
 
 .navbar a:hover{
@@ -146,6 +147,7 @@ header::before{
 
 .box h2{
     padding: 25px;
+    transition: all 0.3s ease-in-out 0.3s;
 }
 
 .box:hover{
@@ -188,6 +190,7 @@ header::before{
     width: 300px;
     height: 190px;
     padding: 20px;
+    transition: all 0.3s ease-in-out 0.3s;
 }
 
 .items h3{
@@ -199,7 +202,7 @@ header::before{
 }
 
 .items img:hover{
-    transform: scale(1.5);
+    transform: scale(1.25);
 }
 
 /* footer */
